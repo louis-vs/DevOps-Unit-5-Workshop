@@ -10,9 +10,27 @@ jobs:
 
     - name: install .NET
       uses: actions/setup-dotnet@v4
-    - name: Install dependencies
+    - name: install Node.js
+      uses: actions/setup-node@v4
+
+    - name: install C# dependencies
       run: dotnet restore
-    - name: Build
+    - name: install NPM dependencies
+      working-directory: DotnetTemplate.Web
+      run: npm ci
+
+    - name: Build dotnet
       run: dotnet build --no-restore
-    - name: Test
+    - name: Build JS
+      working-directory: DotnetTemplate.Web
+      run: npm run build
+
+    - name: Lint JS
+      working-directory: DotnetTemplate.Web
+      run: npm run lint
+
+    - name: Test C#
       run: dotnet test --no-build
+    - name: Test JS
+      working-directory: DotnetTemplate.Web
+      run: npm test
