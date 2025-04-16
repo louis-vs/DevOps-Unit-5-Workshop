@@ -21,6 +21,7 @@ jobs:
 
   test js:
     name: Build and test TypeScript
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     - name: install Node.js
