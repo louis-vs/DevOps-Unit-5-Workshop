@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   test dotnet:
-    name: Build and test
+    name: Build and test C#
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -20,6 +20,7 @@ jobs:
       run: dotnet test --no-build
 
   test js:
+    name: Build and test TypeScript
     steps:
     - uses: actions/checkout@v4
     - name: install Node.js
