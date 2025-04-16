@@ -10,8 +10,6 @@ jobs:
 
     - name: install .NET
       uses: actions/setup-dotnet@v4
-      with:
-        cache: true
     - name: install Node.js
       uses: actions/setup-node@v4
       with:
