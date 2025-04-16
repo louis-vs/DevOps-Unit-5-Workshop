@@ -19,7 +19,7 @@ jobs:
   js:
     name: Build and test TypeScript
     runs-on: ubuntu-latest
-    default:
+    defaults:
       working-directory: DotnetTemplate.Web
     steps:
     - uses: actions/checkout@v4
