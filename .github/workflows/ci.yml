@@ -2,7 +2,7 @@ name: Continuous Integration
 on: [push]
 
 jobs:
-  test dotnet:
+  dotnet:
     name: Build and test C#
     runs-on: ubuntu-latest
     steps:
@@ -19,7 +19,7 @@ jobs:
     - name: Test C#
       run: dotnet test --no-build
 
-  test js:
+  js:
     name: Build and test TypeScript
     runs-on: ubuntu-latest
     steps:
