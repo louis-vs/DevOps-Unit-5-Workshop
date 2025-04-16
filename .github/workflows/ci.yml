@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ${{ env.working-directory }}
+        working-directory: DotnetTemplate.Web
     steps:
     - uses: actions/checkout@v4
     - name: install Node.js
